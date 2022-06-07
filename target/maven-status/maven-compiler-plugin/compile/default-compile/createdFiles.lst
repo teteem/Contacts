@@ -1,0 +1,6 @@
+org\example\resource\ContactsResource.class
+org\example\config\ContactsConfiguration.class
+org\example\repository\ContactsRepository.class
+org\example\repository\DummyEventRepository.class
+org\example\controller\Contanct.class
+org\example\runner\ContactsRunner.class
