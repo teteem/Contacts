@@ -5,10 +5,12 @@ import org.example.controller.Contanct;
 import org.example.repository.ContactsRepository;
 
 import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
+import java.util.Collections;
+import java.util.OptionalLong;
 
 @Path("/contacts")
 public class ContactsResource {
@@ -26,18 +28,23 @@ public class ContactsResource {
     }
 
     @GET
-    public List<Contanct> allEvents(){
+    public List<Contanct> allContacts(){
         return repository.getAll();
     }
 
     @GET
     @Path("{id}")
-    public Contanct contact(@PathParam("id")LongParam id){
-        Optional<Contanct> result=repository.getById(id.get());
-            return result
+//    public Contanct contact(@PathParam("id") OptionalLong id){
+//        Optional<Contanct> result=repository.getById(id.get());
+//            return result
+//                .orElseThrow(() ->
+//                        new WebApplicationException("Contact not found", 404));
+        public Contanct contact(@PathParam("id")LongParam id){
+        return repository.getById(id.get())
                 .orElseThrow(() ->
                         new WebApplicationException("Contact not found", 404));
     }
+
 
     @POST
     public Contanct create(Contanct contanct){
