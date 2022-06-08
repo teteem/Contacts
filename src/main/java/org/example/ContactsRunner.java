@@ -27,9 +27,9 @@ public class ContactsRunner extends Application<ContactsConfiguration>
 
 
     @Override
-    public void run(final ContactsConfiguration contactsConfiguration,
-                    final Environment environment){
-        environment.getObjectMapper().setDateFormat(new SimpleDateFormat(contactsConfiguration.getDateFormat()));
+    public void run( final ContactsConfiguration configuration,
+                     final Environment environment){
+        environment.getObjectMapper().setDateFormat(new SimpleDateFormat(configuration.getDateFormat()));
 
         ContactsRepository repository = new DummyContactRepository();
 
