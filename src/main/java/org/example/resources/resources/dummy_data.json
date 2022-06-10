@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "firstName": "Teele",
+    "lastName": "Teemets",
+    "phone": "5435436",
+    "email": "teele@te.ee"
+
+  },
+  {
+    "id": 2,
+    "firstName": "Pele",
+    "lastName": "Mets",
+    "phone": "5435436",
+    "email": "teele@te.ee"
+
+  }
+]

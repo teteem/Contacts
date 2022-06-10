@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.type.CollectionType;
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
 import org.example.controller.Contanct;
+import org.example.resources.resources.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -37,7 +38,7 @@ public class DummyContactRepository implements ContactsRepository {
     @Override
     public List<Contanct> getAll(){
         return contancts;
-    };
+    }
     @Override
     public Optional<Contanct> getById(Long id){
         return contancts.stream().filter(e -> e.getId() == id).findFirst();

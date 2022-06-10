@@ -1,6 +1,6 @@
-org\example\ContactsRunner.class
 org\example\resource\ContactsResource.class
 org\example\repository\ContactsRepository.class
-org\example\repository\DummyContactRepository.class
 org\example\ContactsConfiguration.class
+org\example\ContactsRunner.class
+org\example\repository\DummyContactRepository.class
 org\example\controller\Contanct.class

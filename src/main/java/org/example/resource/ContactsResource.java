@@ -4,7 +4,15 @@ import io.dropwizard.jersey.params.LongParam;
 import org.example.controller.Contanct;
 import org.example.repository.ContactsRepository;
 
-import javax.ws.rs.*;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Date;
@@ -13,6 +21,7 @@ import java.util.Collections;
 import java.util.OptionalLong;
 
 @Path("/contacts")
+@Produces(MediaType.APPLICATION_JSON)
 public class ContactsResource {
 
     private ContactsRepository repository;
